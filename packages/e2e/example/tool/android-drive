@@ -1,8 +1,8 @@
 #!/bin/bash -e
-testfile="test/counter_e2e_test.dart"
+target="test/counter_e2e_test.dart"
 
 pushd android
 ./gradlew clean
 ./gradlew app:connectedAndroidTest \
-  -Ptarget="$(pwd)/../$testfile"
+  -Ptarget="$(pwd)/../$target"
 popd

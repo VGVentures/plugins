@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+target="test_driver/old"
+
+flutter drive --driver "${target}_test.dart" -t "$target.dart"
+
+# equivalent: flutter drive "$target.dart"

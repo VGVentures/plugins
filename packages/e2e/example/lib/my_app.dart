@@ -1,27 +1,17 @@
 import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 
 // ignore_for_file: public_member_api_docs
 
-void startApp() => runApp(MyApp());
+void startApp() => runApp(App());
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+class App extends StatelessWidget {
+  String get _os => Platform.operatingSystem;
 
-class _MyAppState extends State<MyApp> {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Platform: ${Platform.operatingSystem}\n'),
-        ),
-      ),
-    );
-  }
+          appBar: AppBar(title: const Text('Plugin example app')),
+          body: Center(child: Text('Platform: $_os\n'))));
 }

@@ -1,0 +1,5 @@
+#!/bin/sh -e
+runnable="test_driver/counter_e2e.dart"
+testfile="test/counter_e2e_test.dart"
+
+flutter drive --driver "$runnable" "$testfile"

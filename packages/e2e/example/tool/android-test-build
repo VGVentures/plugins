@@ -1,5 +1,5 @@
 #!/bin/bash -e
-testfile="test/counter_e2e.dart"
+testfile="test/counter_e2e_test.dart"
 # artifacts:
 # - build/app/outputs/flutter-apk/app-debug.apk
 # - build/app/outputs/apk/debug/app-debug.apk
